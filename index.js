@@ -145,7 +145,7 @@ if (command === `${freeprefix}avatar`){
     //LET OP ----------------------------------------------------------------------------------------------------------=============================================================            
     if(command === `${letopprefix}regels`){
         var typer = "<@"+ message.author.id + ">"
-        var chanr = "<#"+ message.channel.813885904220585994 + ">"
+        
         var botEmbed = new discord.MessageEmbed()
         
             .setTitle("Staff commando's")
