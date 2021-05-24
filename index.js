@@ -147,7 +147,7 @@ if (command === `${freeprefix}avatar`){
         var botEmbed = new discord.MessageEmbed()
         var typer = "<@"+ message.author.id + ">"
 
-            .setTitle("LET OP")
+            .setTitle("Staff commando's")
             .setDescription("iemand was de regels vergeten of gewoon een herhaling")
             .setColor("#9900ff")
             .addFields(
