@@ -14,7 +14,7 @@ client.on("ready", async () => {
         type: "LISTENING",
         //url: "https://www.twitch.tv/monstercat"
       });
-    
+    client.user.setStatus("hi")
 
       
 
