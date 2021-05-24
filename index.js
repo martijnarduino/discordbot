@@ -146,8 +146,7 @@ if (command === `${freeprefix}avatar`){
     //LET OP ----------------------------------------------------------------------------------------------------------=============================================================            
     if(command === `${letopprefix}regels`){
         var typer = "<@"+ message.author.id + ">"
-        var chanr = "Make sure to check the rules at " + 
-  message.guild.channels.cache.get(ruleschan).toString();
+        var chanr = message.guild.channels.cache.get(ruleschan).toString();
         var botEmbed = new discord.MessageEmbed()
         
             .setTitle("Staff commando's")
@@ -170,7 +169,7 @@ if (command === `${freeprefix}avatar`){
                 {name: "regel 14", value: "Staande houding voer jij met die agent onverzoenlijk uit."},
                 {name: "regel 15", value: "Schieten doe je pas vanaf 3 agenten in de stad."},
                 {name: "regel 16", value: "Politie mag gang members niet zomaar fouilleren zonder enige reden."},
-                {name: ".", value: chanr})
+                {name: "alle regels zijn ook te vinden in ", value: chanr})
             .addField("regels herhaald door: ", typer);
             
             
@@ -234,12 +233,6 @@ if (command === `${freeprefix}avatar`){
     }
     
 
-
-
-//1. Gebruik geen andere talen dan Nederlands.
-//2.   NSFW of aanstootgevende inhoud van welke aard dan ook is ten strengste verboden.  Als u niet zeker weet of het NSFW is, moet u deze niet plaatsen.
-//3.   Bijnamen moeten vermeld kunnen worden.
-//4.  Ondersteun volwassen gesprekken en respecteer elkaar;  buitensporige godslastering, aanzetten tot haat of enige vorm van intimidatie worden niet getolereerd.
 
 //TEST ----------------------------------------------------------------------------------------------------------=============================================================
 
