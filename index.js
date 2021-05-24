@@ -144,9 +144,9 @@ if (command === `${freeprefix}avatar`){
 
     //LET OP ----------------------------------------------------------------------------------------------------------=============================================================            
     if(command === `${letopprefix}regels`){
-        var botEmbed = new discord.MessageEmbed()
         var typer = "<@"+ message.author.id + ">"
-
+        var botEmbed = new discord.MessageEmbed()
+        
             .setTitle("Staff commando's")
             .setDescription("iemand was de regels vergeten of gewoon een herhaling")
             .setColor("#9900ff")
