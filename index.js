@@ -12,7 +12,7 @@ client.on("ready", async () => {
 
     client.user.setActivity("Martijn#0155", {
         type: "LISTENING",
-        url: "test"
+        //url: "https://www.twitch.tv/monstercat"
       });
     
 
