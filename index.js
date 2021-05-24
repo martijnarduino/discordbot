@@ -170,7 +170,7 @@ if (command === `${freeprefix}avatar`){
                 {name: "regel 16", value: "Politie mag gang members niet zomaar fouilleren zonder enige reden."},
                 {name: ".", value: "."})
             .addField("regels herhaald door: ", typer);
-            .addField("regels- channel", chanr);
+            .addField("regels- channel", "<#813885904220585994>");
         return message.channel.send(botEmbed);
     }
     
