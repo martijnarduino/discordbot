@@ -10,7 +10,7 @@ client.on("ready", async () => {
     console.log(`${client.user.username} is online.`);
 
 
-    client.user.setActivity("Martijn#0155", {
+    client.user.setActivity("Martijn#0155 oke", {
         type: "LISTENING",
         //url: "https://www.twitch.tv/monstercat"
       });
