@@ -36,6 +36,7 @@ client.on("message", async message =>{
     var test = botConfig.tester;
     var ticketbhr = `<@&${ticketrol}>`;
     var memereddit = botConfig.memereddit;
+    var ruleschan = botConfig.ruleschannel;
 
     var messageArray = message.content.split(" ");
 
@@ -146,7 +147,7 @@ if (command === `${freeprefix}avatar`){
     if(command === `${letopprefix}regels`){
         var typer = "<@"+ message.author.id + ">"
         var chanr = "Make sure to check the rules at " + 
-  message.guild.channels.cache.get('813885904220585994').toString();
+  message.guild.channels.cache.get(ruleschan).toString();
         var botEmbed = new discord.MessageEmbed()
         
             .setTitle("Staff commando's")
