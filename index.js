@@ -145,7 +145,8 @@ if (command === `${freeprefix}avatar`){
     //LET OP ----------------------------------------------------------------------------------------------------------=============================================================            
     if(command === `${letopprefix}regels`){
         var typer = "<@"+ message.author.id + ">"
-        
+        var chanr = "Make sure to check the rules at " + 
+  message.guild.channels.cache.get('813885904220585994').toString();
         var botEmbed = new discord.MessageEmbed()
         
             .setTitle("Staff commando's")
@@ -170,7 +171,8 @@ if (command === `${freeprefix}avatar`){
                 {name: "regel 16", value: "Politie mag gang members niet zomaar fouilleren zonder enige reden."},
                 {name: ".", value: "."})
             .addField("regels herhaald door: ", typer);
-            .addField("regels- channel", "<#813885904220585994>");
+            .addField("regels- channel", chanr);
+            
         return message.channel.send(botEmbed);
     }
     
