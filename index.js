@@ -19,7 +19,7 @@ client.on("ready", async () => {
     
       dashboard = new botdash.APIclient(process.env.botdash);
       //dashboard = new botdash.APIclient(botConfig.botdash);
-      return message.channel(845663838727569498,"Started");
+      return message.$`845663838727569498`.send("started");
       
 
 });
