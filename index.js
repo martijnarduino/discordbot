@@ -19,19 +19,7 @@ client.on("ready", async () => {
     
       dashboard = new botdash.APIclient(process.env.botdash);
       //dashboard = new botdash.APIclient(botConfig.botdash);
-      
-      
-
-});
-
-
-client.on("message", async message =>{
-
-    if(message.author.bot) return;
-    if(message.channel.type == "dm") return;
-
-
-    //var prefix = botConfig.prefix;
+       //var prefix = botConfig.prefix;
     var prefix = await dashboard.getVal(message.guild.id, "botprefix");
     //var letopprefix = botConfig.letopprefix; 
     var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
@@ -69,10 +57,63 @@ client.on("message", async message =>{
     
     //var ruleschan = botConfig.ruleschannel;
     var ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
+      
+
+});
+
+
+client.on("message", async message =>{
+
+    if(message.author.bot) return;
+    if(message.channel.type == "dm") return;
+
+
+   
     var messageArray = message.content.split(" ");
 
     var command = messageArray[0];
+    if(command === `${test}reload1`){
+         //var prefix = botConfig.prefix;
+    var prefix = await dashboard.getVal(message.guild.id, "botprefix");
+    //var letopprefix = botConfig.letopprefix; 
+    var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
+    //var freeprefix = botConfig.freeprefix;
+    var freeprefix = await dashboard.getVal(message.guild.id, "freeprefix");
+    //var noperm = botConfig.noperm;
+    var noperm = await dashboard.getVal(message.guild.id, "noperm");
+    //var staffrol = botConfig.staffrol;
+    var staffrol = await dashboard.getVal(message.guild.id, "staffrol");
+    //var ticketrol = botConfig.ticketrol;
+    var ticketrol = await dashboard.getVal(message.guild.id, "ticketrol");
+    var test = botConfig.tester;
+    //var role = "<@" + botConfig.role + ">";
+    var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
 
+    var regel1 = await dashboard.getVal(message.guild.id, "Regel1");
+    var regel2 = await dashboard.getVal(message.guild.id, "Regel2");
+    var regel3 = await dashboard.getVal(message.guild.id, "Regel3");
+    var regel4 = await dashboard.getVal(message.guild.id, "Regel4");
+    var regel5 = await dashboard.getVal(message.guild.id, "Regel5");
+    var regel6 = await dashboard.getVal(message.guild.id, "Regel6");
+    var regel7 = await dashboard.getVal(message.guild.id, "Regel7");
+    var regel8 = await dashboard.getVal(message.guild.id, "Regel8");
+    var regel9 = await dashboard.getVal(message.guild.id, "Regel9");
+    var regel10 = await dashboard.getVal(message.guild.id, "Regel10");
+    var regel11 = await dashboard.getVal(message.guild.id, "Regel11");
+    var regel12 = await dashboard.getVal(message.guild.id, "Regel12");
+    var regel13 = await dashboard.getVal(message.guild.id, "Regel13");
+    var regel14 = await dashboard.getVal(message.guild.id, "Regel14");
+    var regel15 = await dashboard.getVal(message.guild.id, "Regel15");
+    var regel16 = await dashboard.getVal(message.guild.id, "Regel16");
+
+    var ticketbhr = `<@&${ticketrol}>`;
+    var memereddit = botConfig.memereddit;
+    
+    //var ruleschan = botConfig.ruleschannel;
+    var ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
+           
+        return message.channel.send("Done!"); 
+    }
 
 
 
@@ -175,38 +216,6 @@ if (command === `${freeprefix}avatar`){
 
 
     //LET OP ----------------------------------------------------------------------------------------------------------=============================================================            
-  //  if(command === `${letopprefix}regels`){
-    //    var typer = "<@"+ message.author.id + ">"
-      //  var chanr = message.guild.channels.cache.get(ruleschan).toString();
-        //var botEmbed = new discord.MessageEmbed()
-        
-          //  .setTitle("Staff commando's")
-            //.setDescription("iemand was de regels vergeten of gewoon een herhaling")
-//            .setColor("#9900ff")
-  //          .addFields(
-    //            {name: "regel 1", value: "Gebruik geen andere talen dan Nederlands."},
-      //          {name: "regel 2", value: "NSFW of aanstootgevende inhoud van welke aard dan ook is ten strengste verboden.  Als u niet zeker weet of het NSFW is, moet u deze niet plaatsen."},
-        //        {name: "regel 3", value: "Bijnamen moeten vermeld kunnen worden."},
-          //      {name: "regel 4", value: "Ondersteun volwassen gesprekken en respecteer elkaar;  buitensporige godslastering, aanzetten tot haat of enige vorm van intimidatie worden niet getolereerd."},
-            //    {name: "regel 5", value: "Spamming, toxiciteit of agressief gedrag wordt niet getolereerd."},
-              //  {name: "regel 6", value: "Elke vorm van reclame is verboden.  Dit omvat serveradvertenties, linkjes naar een bepaalde website wat hoogstwaarschijnlijk gelinkt is aan een andere server."},
-                //{name: "regel 7", value: "Elke vorm van handel is verboden.  Dit geldt voor alle diensten en ook voor bedelen."},
-//                {name: "regel 8", value: "Alternatieve accounts zijn verboden.  Bij ban / dempingsontduiking worden alle accounts permanent verbannen."},
-  //              {name: "regel 9", value: "Houd rekening met kanalen en hun gebruik;  lees de kanaalbeschrijvingen en let op."},
-    //            {name: "regel 10", value: "Noem @🔰| Staffteam  leden niet, tenzij er een noodsituatie is die onmiddellijke actie vereist. (Het is ook niet toegestaan door het alsnog uit te voeren en vervolgens sorry te zeggen terwijl het geen noodzaak is)"},
-      //          {name: "regel 11", value: "Stuur geen DM berichten aan andere leden, tenzij onderling overeengekomen."},
-        //        {name: "regel 12", value: "Nabootsing van andere gebruikers, bots of publieke figuren is verboden."},
-          //      {name: "regel 13", value: "Vraag @🏡| Burger  niet om OOC te betreden. Dit is een taak voor het @🔰| Moderator als hij/zij jou wilt spreken."},
-            //    {name: "regel 14", value: "Staande houding voer jij met die agent onverzoenlijk uit."},
-              //  {name: "regel 15", value: "Schieten doe je pas vanaf 3 agenten in de stad."},
-                //{name: "regel 16", value: "Politie mag gang members niet zomaar fouilleren zonder enige reden."},
-//                {name: "alle regels zijn ook te vinden in ", value: chanr})
-  //          .addField("regels herhaald door: ", typer);
-            
-            
-    //    return message.channel.send(botEmbed);
-    //}
-
         if(command === `${letopprefix}regels`){
         var typer = "<@"+ message.author.id + ">"
         var chanr = message.guild.channels.cache.get(ruleschan).toString();
@@ -317,7 +326,7 @@ if (command === `${freeprefix}avatar`){
 
 //TEST ----------------------------------------------------------------------------------------------------------=============================================================
 
-if(command === `${test}hallo`){
+if(command === `${test}reload`){
         
            
     return message.channel.send("Hallo!"); 
