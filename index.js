@@ -53,28 +53,28 @@ var ticketbhr = `<@&${ticketrol}>`;
     var command = messageArray[0];
     if(command === `${test}reload1`){
          
-    var regel1 = await dashboard.getVal(message.guild.id, "Regel1");
-    var regel2 = await dashboard.getVal(message.guild.id, "Regel2");
-    var regel3 = await dashboard.getVal(message.guild.id, "Regel3");
-    var regel4 = await dashboard.getVal(message.guild.id, "Regel4");
-    var regel5 = await dashboard.getVal(message.guild.id, "Regel5");
-    var regel6 = await dashboard.getVal(message.guild.id, "Regel6");
-    var regel7 = await dashboard.getVal(message.guild.id, "Regel7");
-    var regel8 = await dashboard.getVal(message.guild.id, "Regel8");
-    var regel9 = await dashboard.getVal(message.guild.id, "Regel9");
-    var regel10 = await dashboard.getVal(message.guild.id, "Regel10");
-    var regel11 = await dashboard.getVal(message.guild.id, "Regel11");
-    var regel12 = await dashboard.getVal(message.guild.id, "Regel12");
-    var regel13 = await dashboard.getVal(message.guild.id, "Regel13");
-    var regel14 = await dashboard.getVal(message.guild.id, "Regel14");
-    var regel15 = await dashboard.getVal(message.guild.id, "Regel15");
-    var regel16 = await dashboard.getVal(message.guild.id, "Regel16");
+    const regel1 = await dashboard.getVal(message.guild.id, "Regel1");
+    const regel2 = await dashboard.getVal(message.guild.id, "Regel2");
+    const regel3 = await dashboard.getVal(message.guild.id, "Regel3");
+    const regel4 = await dashboard.getVal(message.guild.id, "Regel4");
+    const regel5 = await dashboard.getVal(message.guild.id, "Regel5");
+    const regel6 = await dashboard.getVal(message.guild.id, "Regel6");
+    const regel7 = await dashboard.getVal(message.guild.id, "Regel7");
+    const regel8 = await dashboard.getVal(message.guild.id, "Regel8");
+    const regel9 = await dashboard.getVal(message.guild.id, "Regel9");
+    const regel10 = await dashboard.getVal(message.guild.id, "Regel10");
+    const regel11 = await dashboard.getVal(message.guild.id, "Regel11");
+    const regel12 = await dashboard.getVal(message.guild.id, "Regel12");
+    const regel13 = await dashboard.getVal(message.guild.id, "Regel13");
+    const regel14 = await dashboard.getVal(message.guild.id, "Regel14");
+    const regel15 = await dashboard.getVal(message.guild.id, "Regel15");
+    const regel16 = await dashboard.getVal(message.guild.id, "Regel16");
 
 
-    var memereddit = botConfig.memereddit;
+    const memereddit = botConfig.memereddit;
     
     //var ruleschan = botConfig.ruleschannel;
-    var ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
+    const ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
            
         return message.channel.send("Done!"); 
     }
