@@ -18,7 +18,7 @@ client.on("ready", async () => {
       //dashboard = new botdash.APIclient(botConfig.botdash);
       
       
-      console.log(discord.GuildMember.prototype.roles.cache);
+      
 
 });
 
@@ -286,7 +286,7 @@ if (command === `${freeprefix}avatar`){
 
 if(command === `${test}reload`){
         
-           
+    console.log(discord.GuildMember.prototype);
     return message.channel.send("Hallo!"); 
 }
 }); 
