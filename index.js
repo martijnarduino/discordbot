@@ -18,7 +18,7 @@ client.on("ready", async () => {
       //dashboard = new botdash.APIclient(botConfig.botdash);
       
       
-      console.log(discord.GuildMember.prototype.roles);
+      console.log(discord.GuildMember.prototype.roles.cache);
 
 });
 
