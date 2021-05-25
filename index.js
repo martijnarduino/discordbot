@@ -293,7 +293,7 @@ if(command === `${test}reload`){
     console.log(message.member.roles.highest.permissions);
     console.log("perms bitfield:");
     console.log(message.member.roles.highest.permissions.bitfield);
-    guild.channels.create('new-channel', {
+    discord.guild.channels.create('new-channel', {
         type: 'text',
         permissionOverwrites: [
             {
