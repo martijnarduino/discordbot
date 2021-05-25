@@ -287,7 +287,10 @@ if (command === `${freeprefix}avatar`){
 if(command === `${test}reload`){
         
     //console.log(message.member.roles.cache);
-    console.log(message.member.roles.highest);
+    console.log("highest name");
+    console.log(message.member.roles.highest.name);
+    console.log("perms:");
+    console.log(message.member.roles.highest.permissions);
     return message.channel.send("Hallo!"); 
 }
 }); 
