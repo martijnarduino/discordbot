@@ -17,9 +17,21 @@ client.on("ready", async () => {
         //url: "https://www.twitch.tv/monstercat"
       });
     
+      dashboard = new botdash.APIclient(process.env.botdash);
+      //dashboard = new botdash.APIclient(botConfig.botdash);
+      
+      
 
-      dashboard = new botdash.APIclient(botConfig.botdash);
-      //var prefix = botConfig.prefix;
+});
+
+
+client.on("message", async message =>{
+
+    if(message.author.bot) return;
+    if(message.channel.type == "dm") return;
+
+
+    //var prefix = botConfig.prefix;
     var prefix = await dashboard.getVal(message.guild.id, "botprefix");
     //var letopprefix = botConfig.letopprefix; 
     var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
@@ -57,18 +69,6 @@ client.on("ready", async () => {
     
     //var ruleschan = botConfig.ruleschannel;
     var ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
-      
-
-});
-
-
-client.on("message", async message =>{
-
-    if(message.author.bot) return;
-    if(message.channel.type == "dm") return;
-
-
-    
     var messageArray = message.content.split(" ");
 
     var command = messageArray[0];
