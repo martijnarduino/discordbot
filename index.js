@@ -19,44 +19,7 @@ client.on("ready", async () => {
     
       dashboard = new botdash.APIclient(process.env.botdash);
       //dashboard = new botdash.APIclient(botConfig.botdash);
-       //var prefix = botConfig.prefix;
-    var prefix = await dashboard.getVal(message.guild.id, "botprefix");
-    //var letopprefix = botConfig.letopprefix; 
-    var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
-    //var freeprefix = botConfig.freeprefix;
-    var freeprefix = await dashboard.getVal(message.guild.id, "freeprefix");
-    //var noperm = botConfig.noperm;
-    var noperm = await dashboard.getVal(message.guild.id, "noperm");
-    //var staffrol = botConfig.staffrol;
-    var staffrol = await dashboard.getVal(message.guild.id, "staffrol");
-    //var ticketrol = botConfig.ticketrol;
-    var ticketrol = await dashboard.getVal(message.guild.id, "ticketrol");
-    var test = botConfig.tester;
-    //var role = "<@" + botConfig.role + ">";
-    var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
-
-    var regel1 = await dashboard.getVal(message.guild.id, "Regel1");
-    var regel2 = await dashboard.getVal(message.guild.id, "Regel2");
-    var regel3 = await dashboard.getVal(message.guild.id, "Regel3");
-    var regel4 = await dashboard.getVal(message.guild.id, "Regel4");
-    var regel5 = await dashboard.getVal(message.guild.id, "Regel5");
-    var regel6 = await dashboard.getVal(message.guild.id, "Regel6");
-    var regel7 = await dashboard.getVal(message.guild.id, "Regel7");
-    var regel8 = await dashboard.getVal(message.guild.id, "Regel8");
-    var regel9 = await dashboard.getVal(message.guild.id, "Regel9");
-    var regel10 = await dashboard.getVal(message.guild.id, "Regel10");
-    var regel11 = await dashboard.getVal(message.guild.id, "Regel11");
-    var regel12 = await dashboard.getVal(message.guild.id, "Regel12");
-    var regel13 = await dashboard.getVal(message.guild.id, "Regel13");
-    var regel14 = await dashboard.getVal(message.guild.id, "Regel14");
-    var regel15 = await dashboard.getVal(message.guild.id, "Regel15");
-    var regel16 = await dashboard.getVal(message.guild.id, "Regel16");
-
-    var ticketbhr = `<@&${ticketrol}>`;
-    var memereddit = botConfig.memereddit;
-    
-    //var ruleschan = botConfig.ruleschannel;
-    var ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
+      
       
 
 });
@@ -66,29 +29,30 @@ client.on("message", async message =>{
 
     if(message.author.bot) return;
     if(message.channel.type == "dm") return;
+//var prefix = botConfig.prefix;
+var prefix = await dashboard.getVal(message.guild.id, "botprefix");
+//var letopprefix = botConfig.letopprefix; 
+var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
+//var freeprefix = botConfig.freeprefix;
+var freeprefix = await dashboard.getVal(message.guild.id, "freeprefix");
+//var noperm = botConfig.noperm;
+var noperm = await dashboard.getVal(message.guild.id, "noperm");
+//var staffrol = botConfig.staffrol;
+var staffrol = await dashboard.getVal(message.guild.id, "staffrol");
+//var ticketrol = botConfig.ticketrol;
+var ticketrol = await dashboard.getVal(message.guild.id, "ticketrol");
+var test = botConfig.tester;
+//var role = "<@" + botConfig.role + ">";
+var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
 
+var ticketbhr = `<@&${ticketrol}>`;
 
    
     var messageArray = message.content.split(" ");
 
     var command = messageArray[0];
     if(command === `${test}reload1`){
-         //var prefix = botConfig.prefix;
-    var prefix = await dashboard.getVal(message.guild.id, "botprefix");
-    //var letopprefix = botConfig.letopprefix; 
-    var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
-    //var freeprefix = botConfig.freeprefix;
-    var freeprefix = await dashboard.getVal(message.guild.id, "freeprefix");
-    //var noperm = botConfig.noperm;
-    var noperm = await dashboard.getVal(message.guild.id, "noperm");
-    //var staffrol = botConfig.staffrol;
-    var staffrol = await dashboard.getVal(message.guild.id, "staffrol");
-    //var ticketrol = botConfig.ticketrol;
-    var ticketrol = await dashboard.getVal(message.guild.id, "ticketrol");
-    var test = botConfig.tester;
-    //var role = "<@" + botConfig.role + ">";
-    var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
-
+         
     var regel1 = await dashboard.getVal(message.guild.id, "Regel1");
     var regel2 = await dashboard.getVal(message.guild.id, "Regel2");
     var regel3 = await dashboard.getVal(message.guild.id, "Regel3");
@@ -106,7 +70,7 @@ client.on("message", async message =>{
     var regel15 = await dashboard.getVal(message.guild.id, "Regel15");
     var regel16 = await dashboard.getVal(message.guild.id, "Regel16");
 
-    var ticketbhr = `<@&${ticketrol}>`;
+
     var memereddit = botConfig.memereddit;
     
     //var ruleschan = botConfig.ruleschannel;
