@@ -46,8 +46,14 @@ client.on("message", async message =>{
     var test = botConfig.tester;
     //var role = "<@" + botConfig.role + ">";
     var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
+
+    var regel1 = await dashboard.getVal(message.guild.id, "Regel1");
+    var regel2 = await dashboard.getVal(message.guild.id, "Regel2");
+    var regel3 = await dashboard.getVal(message.guild.id, "Regel3");
+    var regel4 = await dashboard.getVal(message.guild.id, "Regel4");
+
+
     var ticketbhr = `<@&${ticketrol}>`;
-    
     var memereddit = botConfig.memereddit;
     
     //var ruleschan = botConfig.ruleschannel;
@@ -158,7 +164,39 @@ if (command === `${freeprefix}avatar`){
 
 
     //LET OP ----------------------------------------------------------------------------------------------------------=============================================================            
-    if(command === `${letopprefix}regels`){
+  //  if(command === `${letopprefix}regels`){
+    //    var typer = "<@"+ message.author.id + ">"
+      //  var chanr = message.guild.channels.cache.get(ruleschan).toString();
+        //var botEmbed = new discord.MessageEmbed()
+        
+          //  .setTitle("Staff commando's")
+            //.setDescription("iemand was de regels vergeten of gewoon een herhaling")
+//            .setColor("#9900ff")
+  //          .addFields(
+    //            {name: "regel 1", value: "Gebruik geen andere talen dan Nederlands."},
+      //          {name: "regel 2", value: "NSFW of aanstootgevende inhoud van welke aard dan ook is ten strengste verboden.  Als u niet zeker weet of het NSFW is, moet u deze niet plaatsen."},
+        //        {name: "regel 3", value: "Bijnamen moeten vermeld kunnen worden."},
+          //      {name: "regel 4", value: "Ondersteun volwassen gesprekken en respecteer elkaar;  buitensporige godslastering, aanzetten tot haat of enige vorm van intimidatie worden niet getolereerd."},
+            //    {name: "regel 5", value: "Spamming, toxiciteit of agressief gedrag wordt niet getolereerd."},
+              //  {name: "regel 6", value: "Elke vorm van reclame is verboden.  Dit omvat serveradvertenties, linkjes naar een bepaalde website wat hoogstwaarschijnlijk gelinkt is aan een andere server."},
+                //{name: "regel 7", value: "Elke vorm van handel is verboden.  Dit geldt voor alle diensten en ook voor bedelen."},
+//                {name: "regel 8", value: "Alternatieve accounts zijn verboden.  Bij ban / dempingsontduiking worden alle accounts permanent verbannen."},
+  //              {name: "regel 9", value: "Houd rekening met kanalen en hun gebruik;  lees de kanaalbeschrijvingen en let op."},
+    //            {name: "regel 10", value: "Noem @🔰| Staffteam  leden niet, tenzij er een noodsituatie is die onmiddellijke actie vereist. (Het is ook niet toegestaan door het alsnog uit te voeren en vervolgens sorry te zeggen terwijl het geen noodzaak is)"},
+      //          {name: "regel 11", value: "Stuur geen DM berichten aan andere leden, tenzij onderling overeengekomen."},
+        //        {name: "regel 12", value: "Nabootsing van andere gebruikers, bots of publieke figuren is verboden."},
+          //      {name: "regel 13", value: "Vraag @🏡| Burger  niet om OOC te betreden. Dit is een taak voor het @🔰| Moderator als hij/zij jou wilt spreken."},
+            //    {name: "regel 14", value: "Staande houding voer jij met die agent onverzoenlijk uit."},
+              //  {name: "regel 15", value: "Schieten doe je pas vanaf 3 agenten in de stad."},
+                //{name: "regel 16", value: "Politie mag gang members niet zomaar fouilleren zonder enige reden."},
+//                {name: "alle regels zijn ook te vinden in ", value: chanr})
+  //          .addField("regels herhaald door: ", typer);
+            
+            
+    //    return message.channel.send(botEmbed);
+    //}
+
+        if(command === `${letopprefix}regels`){
         var typer = "<@"+ message.author.id + ">"
         var chanr = message.guild.channels.cache.get(ruleschan).toString();
         var botEmbed = new discord.MessageEmbed()
@@ -167,10 +205,10 @@ if (command === `${freeprefix}avatar`){
             .setDescription("iemand was de regels vergeten of gewoon een herhaling")
             .setColor("#9900ff")
             .addFields(
-                {name: "regel 1", value: "Gebruik geen andere talen dan Nederlands."},
-                {name: "regel 2", value: "NSFW of aanstootgevende inhoud van welke aard dan ook is ten strengste verboden.  Als u niet zeker weet of het NSFW is, moet u deze niet plaatsen."},
-                {name: "regel 3", value: "Bijnamen moeten vermeld kunnen worden."},
-                {name: "regel 4", value: "Ondersteun volwassen gesprekken en respecteer elkaar;  buitensporige godslastering, aanzetten tot haat of enige vorm van intimidatie worden niet getolereerd."},
+                {name: "regel 1", value: regel1},
+                {name: "regel 2", value: regel2},
+                {name: "regel 3", value: regel3},
+                {name: "regel 4", value: regel4},
                 {name: "regel 5", value: "Spamming, toxiciteit of agressief gedrag wordt niet getolereerd."},
                 {name: "regel 6", value: "Elke vorm van reclame is verboden.  Dit omvat serveradvertenties, linkjes naar een bepaalde website wat hoogstwaarschijnlijk gelinkt is aan een andere server."},
                 {name: "regel 7", value: "Elke vorm van handel is verboden.  Dit geldt voor alle diensten en ook voor bedelen."},
