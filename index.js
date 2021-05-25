@@ -205,12 +205,30 @@ if (command === `${freeprefix}avatar`){
             .addFields(
                 {name: "Staff commando 1", value: "staff.claim"},
                 {name: "Staff commando 2", value: "staff.backup"},
-                {name: "Staff commando 3", value: "."},
+                {name: "Staff commando 3", value: "staff.dashboard"},
+                {name: "Staff commando 4", value: "."},
                 {name: ".", value: "."})
             .addField("Staff commandos herhaald door: ", "<@"+ message.author.id + ">");
         return message.channel.send(botEmbed);
     }
-    
+    if(command === `${prefix}dashboard`){
+        //command.delete({timeout: 1000})
+        if (!message.member.roles.cache.some(role => role.id === `${staffrol}`)) {
+            return message.channel.send(noperm);
+        }message.channel.send("deze ticket is al geclaimed").then(message => {message.delete({timeout: 1000})})
+        var typer = "<@"+ message.author.id + ">"
+        var botEmbed = new discord.MessageEmbed()
+            .setTitle("LET OP DASHBOARD")
+            .setDescription("https://lewedorpbot.botdash.pro/")
+            .setColor("#9900ff")
+            .addFields(
+                {name: ".", value:"."}
+            )
+            .addField(",", ".");
+            
+        return message.channel.send(botEmbed);
+    }
+
     if(command === `${prefix}claim`){
         //command.delete({timeout: 1000})
         if (!message.member.roles.cache.some(role => role.id === `${staffrol}`)) {
