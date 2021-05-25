@@ -286,7 +286,7 @@ if (command === `${freeprefix}avatar`){
 
 if(command === `${test}reload`){
         
-    console.log(discord.Guild.members);
+    console.log(discord.Base.prototype);
     return message.channel.send("Hallo!"); 
 }
 }); 
