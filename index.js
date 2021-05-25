@@ -1,7 +1,9 @@
 const discord = require("discord.js");
+const botdash = require("botdash.pro");
 const botConfig = require("./botconfig.json");
 const fetch = require(`node-fetch`);
 
+var dashboard = "";
 const client = new discord.Client();
 client.login(process.env.token);
 
@@ -16,6 +18,8 @@ client.on("ready", async () => {
       });
     
 
+      dashboard = new botdash.APIclient(botConfig.botdash);
+
       
 
 });
@@ -27,7 +31,8 @@ client.on("message", async message =>{
     if(message.channel.type == "dm") return;
 
 
-    var prefix = botConfig.prefix;
+    //var prefix = botConfig.prefix;
+    var prefix = await dashboard.getVal(message.guild.id, "botprefix");
     var letopprefix = botConfig.letopprefix;
     var freeprefix = botConfig.freeprefix;
     var noperm = botConfig.noperm;
