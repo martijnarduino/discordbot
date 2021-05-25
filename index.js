@@ -287,7 +287,7 @@ if (command === `${freeprefix}avatar`){
 if(command === `${test}reload`){
         
     //console.log(message.member.roles.cache);
-    console.log(message.guild.roles.everyone.cache);
+    console.log(message.guild.roles.highest.id);
     return message.channel.send("Hallo!"); 
 }
 }); 
