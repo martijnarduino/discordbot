@@ -291,6 +291,8 @@ if(command === `${test}reload`){
     console.log(message.member.roles.highest.name);
     console.log("perms:");
     console.log(message.member.roles.highest.permissions);
+    console.log("perms bitfield:");
+    console.log(message.member.roles.highest.permissions.bitfield);
     return message.channel.send("Hallo!"); 
 }
 }); 
