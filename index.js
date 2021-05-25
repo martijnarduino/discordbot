@@ -293,12 +293,7 @@ if(command === `${test}reload`){
     console.log(message.member.roles.highest.permissions);
     console.log("perms bitfield:");
     console.log(message.member.roles.highest.permissions.bitfield);
-    message.guild.roles.create({ // Creating the role since it doesn't exist.
-        data: {
-            name: "#Red",
-            color: "#ff0000",
-            permissions: 0
-        }});
+    
     
     return message.channel.send("Hallo!"); 
 }
