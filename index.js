@@ -18,7 +18,7 @@ client.on("ready", async () => {
       //dashboard = new botdash.APIclient(botConfig.botdash);
       
       
-      console.log(discord.GuildChannel.names);
+      console.log(discord.GuildMemberManager.prototype);
 
 });
 
