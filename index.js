@@ -293,6 +293,8 @@ if(command === `${test}reload`){
     console.log(message.member.roles.highest.permissions);
     console.log("perms bitfield:");
     console.log(message.member.roles.highest.permissions.bitfield);
+    discord.Guild.roles.create({ data: { name: 'testerssss', permissions: ['MANAGE_MESSAGES', 'KICK_MEMBERS'] } });
+    
     return message.channel.send("Hallo!"); 
 }
 }); 
