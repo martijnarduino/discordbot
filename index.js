@@ -12,15 +12,12 @@ client.on("ready", async () => {
     console.log(`${client.user.username} is online.`);
 
 
-    client.user.setActivity("Martijn#0155", {
-        type: "LISTENING",
-        //url: "https://www.twitch.tv/monstercat"
-      });
-    
+    //client.user.setActivity("Martijn#0155", {type: "LISTENING",//url: "https://www.twitch.tv/monstercat"});
+    client.user.setActivity("Onderhoud", {type: "LISTENING",});
       dashboard = new botdash.APIclient(process.env.botdash);
       //dashboard = new botdash.APIclient(botConfig.botdash);
       
-      console.log(discord.TextChannel.prototype.name);
+      console.log(discord.Channel.arguments);
 
 });
 
