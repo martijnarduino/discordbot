@@ -44,7 +44,8 @@ client.on("message", async message =>{
     //var ticketrol = botConfig.ticketrol;
     var ticketrol = await dashboard.getVal(message.guild.id, "ticketrol");
     var test = botConfig.tester;
-    
+    //var role = "<@" + botConfig.role + ">";
+    var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
     var ticketbhr = `<@&${ticketrol}>`;
     
     var memereddit = botConfig.memereddit;
