@@ -17,7 +17,7 @@ client.on("ready", async () => {
       dashboard = new botdash.APIclient(process.env.botdash);
       //dashboard = new botdash.APIclient(botConfig.botdash);
       
-      console.log(discord.Channel.arguments);
+      console.log(discord.Channel.argument);
 
 });
 
