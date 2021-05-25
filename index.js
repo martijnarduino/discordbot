@@ -19,8 +19,8 @@ client.on("ready", async () => {
     
       dashboard = new botdash.APIclient(process.env.botdash);
       //dashboard = new botdash.APIclient(botConfig.botdash);
-      $`845663838727569498`.send("started");
       
+      console.log(discord.TextChannel.prototype);
 
 });
 
