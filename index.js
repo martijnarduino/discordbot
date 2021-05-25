@@ -252,7 +252,7 @@ if (command === `${freeprefix}avatar`){
             .setDescription(".")
             .setColor("#9900ff")
             .addFields(
-                {name: "Staff commando 1", value: ${prefix} +"claim"},
+                {name: "Staff commando 1", value: `${prefix}` +"claim"},
                 {name: "Staff commando 2", value: "staff.backup"},
                 {name: "Staff commando 3", value: "staff.dashboard"},
                 {name: "Staff commando 4", value: "."},
