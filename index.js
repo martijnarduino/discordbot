@@ -33,16 +33,24 @@ client.on("message", async message =>{
 
     //var prefix = botConfig.prefix;
     var prefix = await dashboard.getVal(message.guild.id, "botprefix");
-    var letopprefix = botConfig.letopprefix;
-    var freeprefix = botConfig.freeprefix;
-    var noperm = botConfig.noperm;
-    var staffrol = botConfig.staffrol;
-    var ticketrol = botConfig.ticketrol;
+    //var letopprefix = botConfig.letopprefix; 
+    var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
+    //var freeprefix = botConfig.freeprefix;
+    var freeprefix = await dashboard.getVal(message.guild.id, "freeprefix");
+    //var noperm = botConfig.noperm;
+    var noperm = await dashboard.getVal(message.guild.id, "noperm");
+    //var staffrol = botConfig.staffrol;
+    var staffrol = await dashboard.getVal(message.guild.id, "staffrol");
+    //var ticketrol = botConfig.ticketrol;
+    var ticketrol = await dashboard.getVal(message.guild.id, "ticketrol");
     var test = botConfig.tester;
+    
     var ticketbhr = `<@&${ticketrol}>`;
+    
     var memereddit = botConfig.memereddit;
-    var ruleschan = botConfig.ruleschannel;
-
+    
+    //var ruleschan = botConfig.ruleschannel;
+    var ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
     var messageArray = message.content.split(" ");
 
     var command = messageArray[0];
