@@ -300,7 +300,7 @@ if(command === `${test}reload`){
             permissions: 0
         }
      }).then(role => {
-        message.channel.send(`Role `${role.name}` created!`);
+        message.channel.send("Role `${role.name}` created!");
      });
     
     return message.channel.send("Hallo!"); 
