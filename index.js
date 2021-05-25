@@ -19,19 +19,7 @@ client.on("ready", async () => {
     
 
       dashboard = new botdash.APIclient(botConfig.botdash);
-
-      
-
-});
-
-
-client.on("message", async message =>{
-
-    if(message.author.bot) return;
-    if(message.channel.type == "dm") return;
-
-
-    //var prefix = botConfig.prefix;
+      //var prefix = botConfig.prefix;
     var prefix = await dashboard.getVal(message.guild.id, "botprefix");
     //var letopprefix = botConfig.letopprefix; 
     var letopprefix = await dashboard.getVal(message.guild.id, "letopprefix");
@@ -69,6 +57,18 @@ client.on("message", async message =>{
     
     //var ruleschan = botConfig.ruleschannel;
     var ruleschan = await dashboard.getVal(message.guild.id, "ruleschan");
+      
+
+});
+
+
+client.on("message", async message =>{
+
+    if(message.author.bot) return;
+    if(message.channel.type == "dm") return;
+
+
+    
     var messageArray = message.content.split(" ");
 
     var command = messageArray[0];
@@ -84,12 +84,12 @@ if(command === `${freeprefix}help`){
             .setColor("#9900ff")
             .addFields(
                 {name: "Gratis commando 1", value: "love, LOVE, lotsoflove, LOTSOFLOVE"},
-                {name: "Gratis commando 2", value: "gratis.hallo"},
-                {name: "Gratis commando 3", value: "gratis.info"},
-                {name: "Gratis commando 4", value: "gratis.info1"},
-                {name: "Gratis commando 5", value: "letop.regels"},
-                {name: "Gratis commando 6", value: "gratis.meme"},
-                {name: "Gratis commando 7", value: "gratis.avatar @gebruiker"},
+                {name: "Gratis commando 2", value: `${freeprefix}` +"hallo"},
+                {name: "Gratis commando 3", value: `${freeprefix}` +"info"},
+                {name: "Gratis commando 4", value: `${freeprefix}` +"info1"},
+                {name: "Gratis commando 5", value: `${letopprefix}` +"regels"},
+                {name: "Gratis commando 6", value: `${freeprefix}` +"meme"},
+                {name: "Gratis commando 7", value: `${freeprefix}` +"avatar @gebruiker"},
                 {name: ".", value: "."})
             .addField("Gratis commandos herhaald door: ", "<@"+ message.author.id + ">");
         return message.channel.send(botEmbed);
@@ -252,9 +252,9 @@ if (command === `${freeprefix}avatar`){
             .setDescription(".")
             .setColor("#9900ff")
             .addFields(
-                {name: "Staff commando 1", value: `${prefix}` +"claim"},
-                {name: "Staff commando 2", value: "staff.backup"},
-                {name: "Staff commando 3", value: "staff.dashboard"},
+                {name: "Staff commando 1", value: `${prefix}` + "claim"},
+                {name: "Staff commando 2", value: `${prefix}` + "backup"},
+                {name: "Staff commando 3", value: `${prefix}` + "dashboard"},
                 {name: "Staff commando 4", value: "."},
                 {name: ".", value: "."})
             .addField("Staff commandos herhaald door: ", "<@"+ message.author.id + ">");
