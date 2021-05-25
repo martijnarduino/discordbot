@@ -51,7 +51,18 @@ client.on("message", async message =>{
     var regel2 = await dashboard.getVal(message.guild.id, "Regel2");
     var regel3 = await dashboard.getVal(message.guild.id, "Regel3");
     var regel4 = await dashboard.getVal(message.guild.id, "Regel4");
-
+    var regel5 = await dashboard.getVal(message.guild.id, "Regel5");
+    var regel6 = await dashboard.getVal(message.guild.id, "Regel6");
+    var regel7 = await dashboard.getVal(message.guild.id, "Regel7");
+    var regel8 = await dashboard.getVal(message.guild.id, "Regel8");
+    var regel9 = await dashboard.getVal(message.guild.id, "Regel9");
+    var regel10 = await dashboard.getVal(message.guild.id, "Regel10");
+    var regel11 = await dashboard.getVal(message.guild.id, "Regel11");
+    var regel12 = await dashboard.getVal(message.guild.id, "Regel12");
+    var regel13 = await dashboard.getVal(message.guild.id, "Regel13");
+    var regel14 = await dashboard.getVal(message.guild.id, "Regel14");
+    var regel15 = await dashboard.getVal(message.guild.id, "Regel15");
+    var regel16 = await dashboard.getVal(message.guild.id, "Regel16");
 
     var ticketbhr = `<@&${ticketrol}>`;
     var memereddit = botConfig.memereddit;
@@ -201,7 +212,7 @@ if (command === `${freeprefix}avatar`){
         var chanr = message.guild.channels.cache.get(ruleschan).toString();
         var botEmbed = new discord.MessageEmbed()
         
-            .setTitle("Staff commando's")
+            .setTitle("Regels")
             .setDescription("iemand was de regels vergeten of gewoon een herhaling")
             .setColor("#9900ff")
             .addFields(
@@ -209,18 +220,18 @@ if (command === `${freeprefix}avatar`){
                 {name: "regel 2", value: regel2},
                 {name: "regel 3", value: regel3},
                 {name: "regel 4", value: regel4},
-                {name: "regel 5", value: "Spamming, toxiciteit of agressief gedrag wordt niet getolereerd."},
-                {name: "regel 6", value: "Elke vorm van reclame is verboden.  Dit omvat serveradvertenties, linkjes naar een bepaalde website wat hoogstwaarschijnlijk gelinkt is aan een andere server."},
-                {name: "regel 7", value: "Elke vorm van handel is verboden.  Dit geldt voor alle diensten en ook voor bedelen."},
-                {name: "regel 8", value: "Alternatieve accounts zijn verboden.  Bij ban / dempingsontduiking worden alle accounts permanent verbannen."},
-                {name: "regel 9", value: "Houd rekening met kanalen en hun gebruik;  lees de kanaalbeschrijvingen en let op."},
-                {name: "regel 10", value: "Noem @🔰| Staffteam  leden niet, tenzij er een noodsituatie is die onmiddellijke actie vereist. (Het is ook niet toegestaan door het alsnog uit te voeren en vervolgens sorry te zeggen terwijl het geen noodzaak is)"},
-                {name: "regel 11", value: "Stuur geen DM berichten aan andere leden, tenzij onderling overeengekomen."},
-                {name: "regel 12", value: "Nabootsing van andere gebruikers, bots of publieke figuren is verboden."},
-                {name: "regel 13", value: "Vraag @🏡| Burger  niet om OOC te betreden. Dit is een taak voor het @🔰| Moderator als hij/zij jou wilt spreken."},
-                {name: "regel 14", value: "Staande houding voer jij met die agent onverzoenlijk uit."},
-                {name: "regel 15", value: "Schieten doe je pas vanaf 3 agenten in de stad."},
-                {name: "regel 16", value: "Politie mag gang members niet zomaar fouilleren zonder enige reden."},
+                {name: "regel 5", value: regel5},
+                {name: "regel 6", value: regel6},
+                {name: "regel 7", value: regel7},
+                {name: "regel 8", value: regel8},
+                {name: "regel 9", value: regel9},
+                {name: "regel 10", value: regel1},
+                {name: "regel 11", value: regel11},
+                {name: "regel 12", value: regel12},
+                {name: "regel 13", value: regel13},
+                {name: "regel 14", value: regel14},
+                {name: "regel 15", value: regel15},
+                {name: "regel 16", value: regel16},
                 {name: "alle regels zijn ook te vinden in ", value: chanr})
             .addField("regels herhaald door: ", typer);
             
@@ -241,7 +252,7 @@ if (command === `${freeprefix}avatar`){
             .setDescription(".")
             .setColor("#9900ff")
             .addFields(
-                {name: "Staff commando 1", value: "staff.claim"},
+                {name: "Staff commando 1", value: ${prefix} +"claim"},
                 {name: "Staff commando 2", value: "staff.backup"},
                 {name: "Staff commando 3", value: "staff.dashboard"},
                 {name: "Staff commando 4", value: "."},
