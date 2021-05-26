@@ -43,7 +43,8 @@ client.on("message", async message =>{
     var ticketrol = await dashboard.getVal(message.guild.id, "ticketrol");
     var test = botConfig.tester;
     //var role = "<@" + botConfig.role + ">";
-    var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
+    //var role = "<@" + await dashboard.getVal(message.guild.id, "role"); + ">";
+    var role = await dashboard.getVal(message.guild.id, "staffrol");
 
     var regel1 = await dashboard.getVal(message.guild.id, "Regel1");
     var regel2 = await dashboard.getVal(message.guild.id, "Regel2");
