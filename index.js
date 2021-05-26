@@ -232,16 +232,18 @@ if (command === `${freeprefix}avatar`){
         //command.delete({timeout: 1000})
         if (!message.member.roles.cache.some(role => role.id === `${staffrol}`)) {
             return message.channel.send(noperm);
-        }message.channel.send("deze ticket is al geclaimed").then(message => {message.delete({timeout: 1000})})
+        }
+        message.channel.send("support/backup server bot").then(message => {message.delete({timeout: 1000})})
         var typer = "<@"+ message.author.id + ">"
         var botEmbed = new discord.MessageEmbed()
             .setTitle("LET OP DASHBOARD")
-            .setDescription("https://lewedorpbot.botdash.pro/")
+            .setDescription("https://lewedorpbot.botdash.pro/",)
             .setColor("#9900ff")
             .addFields(
-                {name: ".", value:"."}
+                {name: "backup/support server bot:", value:"https://discord.gg/x72ypFFxUz"},
+                {name: "Owner bot:", value: "martijn#0155"}
             )
-            .addField(",", ".");
+            .addField(".", ".");
             
         return message.channel.send(botEmbed);
     }
